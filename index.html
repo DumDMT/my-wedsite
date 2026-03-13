@@ -1,102 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>My First Website</title>
+<meta charset="UTF-8">
+<title>My First Website</title>
 
-    <style>
-        body{
-            background-color: #e8f4ff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
+<style>
 
-        h1{
-            color: #2c3e50;
-        }
+body{
+    background: linear-gradient(to right,#74ebd5,#ACB6E5);
+    font-family: Arial;
+    margin:0;
+    padding:0;
+}
 
-        img{
-            width: 300px;
-            border-radius: 10px;
-        }
+.container{
+    width:60%;
+    margin:auto;
+    background:white;
+    padding:30px;
+    margin-top:50px;
+    border-radius:10px;
+    text-align:center;
+}
 
-        ul{
-            list-style-type: square;
-        }
+h1{
+    color:#333;
+}
 
-        button{
-            padding: 10px 15px;
-            margin: 5px;
-            border: none;
-            background-color: #3498db;
-            color: white;
-            cursor: pointer;
-        }
+img{
+    width:250px;
+    border-radius:10px;
+}
 
-        button:hover{
-            background-color: #2980b9;
-        }
-    </style>
+ul{
+    text-align:left;
+    display:inline-block;
+}
+
+button{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    border-radius:5px;
+    background:#3498db;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+input{
+    padding:8px;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+#result{
+    margin-top:15px;
+    font-weight:bold;
+}
+
+a{
+    color:#3498db;
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- Heading -->
-    <h1>เว็บไซต์แนะนำการเรียนเขียนเว็บ</h1>
+<div class="container">
 
-    <!-- รูปภาพ -->
-    <img src="computer-program-coding-screen.jpg" alt="example image">
+<h1>เว็บไซต์แนะนำการเรียนเขียนเว็บ</h1>
 
-    <!-- ข้อความแนะนำ -->
-    <p>
-        เว็บไซต์นี้สร้างขึ้นเพื่อทดลองเขียน HTML CSS และ JavaScript 
-        สำหรับนักศึกษาเริ่มต้นเรียนการพัฒนาเว็บไซต์
-    </p>
+<img src="https://picsum.photos/300" alt="example">
 
-    <!-- List -->
-    <h3>สิ่งที่เรียนในเว็บไซต์นี้</h3>
-    <ul>
-        <li>HTML พื้นฐาน</li>
-        <li>CSS สำหรับตกแต่งเว็บไซต์</li>
-        <li>JavaScript สำหรับการโต้ตอบกับผู้ใช้</li>
-    </ul>
+<p>
+เว็บไซต์นี้สร้างขึ้นเพื่อทดลองการเขียน HTML CSS และ JavaScript
+สำหรับผู้เริ่มต้นพัฒนาเว็บไซต์
+</p>
 
-    <!-- ลิงก์ -->
-    <p>
-        ศึกษาเพิ่มเติมได้ที่
-        <a href="https://www.w3schools.com" target="_blank">
-            W3Schools
-        </a>
-    </p>
+<h3>สิ่งที่ได้เรียนรู้</h3>
 
-    <hr>
+<ul>
+<li>HTML โครงสร้างเว็บไซต์</li>
+<li>CSS การตกแต่งหน้าเว็บ</li>
+<li>JavaScript การโต้ตอบกับผู้ใช้</li>
+</ul>
 
-    <!-- ปุ่มแสดงข้อความ -->
-    <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+<p>
+ศึกษาเพิ่มเติมได้ที่
+<a href="https://www.w3schools.com" target="_blank">
+W3Schools
+</a>
+</p>
 
-    <br><br>
+<hr>
 
-    <!-- ช่องกรอกชื่อ -->
-    <input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+<button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
 
-    <button onclick="sayHello()">ทักทาย</button>
+<br><br>
 
-    <p id="result"></p>
+<input type="text" id="username" placeholder="กรอกชื่อของคุณ">
 
-    <script>
-        function showWelcome(){
-            alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
-        }
+<button onclick="sayHello()">ทักทาย</button>
 
-        function sayHello(){
-            let name = document.getElementById("username").value;
-            document.getElementById("result").innerHTML =
-            "สวัสดี " + name + " ยินดีต้อนรับ";
-        }
-    </script>
+<p id="result"></p>
+
+</div>
+
+<script>
+
+function showWelcome(){
+alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+}
+
+function sayHello(){
+let name = document.getElementById("username").value;
+document.getElementById("result").innerHTML =
+"สวัสดี "+name+" ยินดีต้อนรับ";
+}
+
+</script>
 
 </body>
-
 </html>
+
 
 
