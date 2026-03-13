@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Website</title>
+
+    <style>
+        body{
+            background-color: #e8f4ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        h1{
+            color: #2c3e50;
+        }
+
+        img{
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        ul{
+            list-style-type: square;
+        }
+
+        button{
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover{
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Heading -->
+    <h1>เว็บไซต์แนะนำการเรียนเขียนเว็บ</h1>
+
+    <!-- รูปภาพ -->
+    <img src="https://picsum.photos/300" alt="example image">
+
+    <!-- ข้อความแนะนำ -->
+    <p>
+        เว็บไซต์นี้สร้างขึ้นเพื่อทดลองเขียน HTML CSS และ JavaScript 
+        สำหรับนักศึกษาเริ่มต้นเรียนการพัฒนาเว็บไซต์
+    </p>
+
+    <!-- List -->
+    <h3>สิ่งที่เรียนในเว็บไซต์นี้</h3>
+    <ul>
+        <li>HTML พื้นฐาน</li>
+        <li>CSS สำหรับตกแต่งเว็บไซต์</li>
+        <li>JavaScript สำหรับการโต้ตอบกับผู้ใช้</li>
+    </ul>
+
+    <!-- ลิงก์ -->
+    <p>
+        ศึกษาเพิ่มเติมได้ที่
+        <a href="https://www.w3schools.com" target="_blank">
+            W3Schools
+        </a>
+    </p>
+
+    <hr>
+
+    <!-- ปุ่มแสดงข้อความ -->
+    <button onclick="showWelcome()">แสดงข้อความต้อนรับ</button>
+
+    <br><br>
+
+    <!-- ช่องกรอกชื่อ -->
+    <input type="text" id="username" placeholder="กรอกชื่อของคุณ">
+
+    <button onclick="sayHello()">ทักทาย</button>
+
+    <p id="result"></p>
+
+    <script>
+        function showWelcome(){
+            alert("ยินดีต้อนรับสู่เว็บไซต์ของฉัน");
+        }
+
+        function sayHello(){
+            let name = document.getElementById("username").value;
+            document.getElementById("result").innerHTML =
+            "สวัสดี " + name + " ยินดีต้อนรับ";
+        }
+    </script>
+
+</body>
+</html>
